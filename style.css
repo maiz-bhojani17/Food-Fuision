@@ -1,0 +1,458 @@
+/* first page */
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin-left: 1em;
+}
+
+.container {
+    background-color: #f4b400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+a {
+    text-align: center;
+    margin-right: 40px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 3px;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.img-1 {
+
+    height: 400px;
+    width: 100%;
+}
+
+.p-1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.p-2 {
+    color: rgb(250, 151, 46);
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Left Side */
+
+.left {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+
+}
+
+.left img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.left h2 {
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.left p {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Right Side */
+
+.right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    transition: .3s;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.card h3 {
+    padding: 12px;
+    font-size: 17px;
+}
+
+/* second page */
+
+.desserts {
+    margin-left: 0.7em;
+    font-size: 40px;
+    color: black;
+}
+
+/* third page */
+
+.drinks {
+    margin-left: 0.7em;
+    font-size: 40px;
+    color: black;
+}
+
+/* fourth page */
+
+.breakfast {
+    margin-left: 0.7em;
+    font-size: 40px;
+    color: black;
+}
+
+/* fifth page */
+
+.lunch {
+    margin-left: 0.7em;
+    font-size: 40px;
+    color: black;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    margin-top: 70px;
+    background: #222;
+    color: white;
+    padding: 50px 70px 20px;
+}
+
+.footer-container {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-box {
+
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-box h2 {
+
+    color: #f4b400;
+    margin-bottom: 20px;
+}
+
+.footer-box p {
+
+    color: #ddd;
+    line-height: 28px;
+}
+
+.footer-box ul {
+
+    list-style: none;
+}
+
+.footer-box ul li {
+
+    margin-bottom: 15px;
+}
+
+.footer-box ul li a {
+
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-box ul li a:hover {
+
+    color: #f4b400;
+}
+
+.footer hr {
+
+    margin: 35px 0 20px;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.copyright {
+    text-align: center;
+    color: #bbb;
+    line-height: 30px;
+}
+
+.designer {
+    color: #f4b400;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.designer strong {
+    color: #f4b400;
+}
+
+
+
+/* =====================================
+          RESPONSIVE NAVBAR
+=====================================*/
+
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    margin: 0;
+}
+
+
+/* =====================================
+          TABLET
+=====================================*/
+
+@media (max-width:992px) {
+
+    .container {
+        padding: 15px 20px;
+    }
+
+    .left {
+        width: 80%;
+    }
+
+    .right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-1 {
+        height: 300px;
+    }
+
+}
+
+
+/* =====================================
+            MOBILE
+=====================================*/
+
+@media (max-width:768px) {
+
+    .container {
+
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+    /* Hide menu */
+
+    .nav-links {
+
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #f4b400;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .nav-links a {
+
+        display: block;
+        padding: 15px;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    /* Hero Image */
+
+    .img-1 {
+
+        height: 220px;
+    }
+
+
+    /* Heading */
+
+    .p-1,
+    .p-2 {
+
+        font-size: 30px;
+    }
+
+
+    /* Left Card */
+
+    .left {
+
+        width: 90%;
+    }
+
+    .left img {
+
+        height: 280px;
+    }
+
+    .left h2 {
+
+        font-size: 24px;
+    }
+
+
+    /* Recipe Cards */
+
+    .right {
+
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+
+        margin: 0 15px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-box {
+
+        width: 100%;
+    }
+
+    .footer-box ul {
+
+        padding: 0;
+    }
+
+}
+
+
+/* =====================================
+          SMALL MOBILE
+=====================================*/
+
+@media (max-width:480px) {
+
+    .logo {
+
+        width: 55px;
+        height: 55px;
+    }
+
+    .img-1 {
+
+        height: 180px;
+    }
+
+    .p-1,
+    .p-2 {
+
+        font-size: 26px;
+    }
+
+    .left img {
+
+        height: 220px;
+    }
+
+    .left h2 {
+
+        font-size: 20px;
+    }
+
+    .card h3 {
+
+        font-size: 16px;
+    }
+
+    .desserts,
+    .drinks,
+    .breakfast,
+    .lunch {
+
+        font-size: 30px;
+    }
+
+}
